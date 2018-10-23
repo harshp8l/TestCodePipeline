@@ -1,0 +1,17 @@
+phases:
+  install:
+    commands:
+      - echo In install phase...
+      - npm install
+      - npm install -g serverless
+  post_build:
+    commands:
+      #- serverless deploy -verbose
+      - echo In post_build phase...
+      - serverless invoke -f hello
+
+artifacts:
+  files:
+    - serverless.yml
+  discard-paths: yes
+

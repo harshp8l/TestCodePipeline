@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - echo In install phase...
+      - apt-get install npm
       - npm install serverless -g
   post_build:
     commands:

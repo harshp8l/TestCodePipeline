@@ -8,10 +8,11 @@ phases:
   build:
     commands:
       - echo In post_build phase...
+      - cd testPython
       - serverless deploy -verbose
 
 artifacts:
   files:
-    - serverless.yml
+    - testPython/serverless.yml
   discard-paths: yes
 

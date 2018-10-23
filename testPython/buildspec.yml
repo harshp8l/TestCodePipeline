@@ -1,5 +1,10 @@
 version: 0.2
 
+artifacts:
+  files:
+  - testPython/serverless.yml
+  discard-paths: yes
+
 phases:
   install:
     commands:
@@ -7,12 +12,7 @@ phases:
       - npm install -g serverless
   build:
     commands:
-      - echo In post_build phase...
+      - echo In build phase...
       - cd testPython
       - serverless deploy -verbose
-
-artifacts:
-  files:
-    - testPython/serverless.yml
-  discard-paths: yes
 

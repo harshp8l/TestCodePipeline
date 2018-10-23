@@ -9,7 +9,6 @@ phases:
     commands:
       - echo In build phase...
       - cd testPython
-      - ls
       - serverless deploy -v
 
 artifacts:

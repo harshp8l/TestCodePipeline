@@ -8,11 +8,12 @@ phases:
   build:
     commands:
       - echo In build phase...
-      - cd testPython
-      - serverless deploy -v
+      - cd mxnet-bot/LabelBotFullFunctionality
+      - chmod 755 deploy.sh
+      - ./deploy.sh
 
 artifacts:
   files:
-    - testPython/serverless.yml
+    - mxnet-bot/LabelBotFullFunctionality/serverless.yml
   discard-paths: yes
 
